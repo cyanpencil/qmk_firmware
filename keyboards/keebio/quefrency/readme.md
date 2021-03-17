@@ -13,7 +13,12 @@ Make example for this keyboard (after setting up your build environment):
 
 Example of flashing this keyboard:
 
-    make keebio/quefrency/rev3:default:avrdude
+    make keebio/quefrency/rev3:default:flash
+
+Alternatively, you can use the qmk cli:
+
+    bin/qmk compile -kb keebio/quefrency/rev3 -km default
+    sudo bin/qmk flash -kb keebio/quefrency/rev3 -km default
 
 Handedness detection is already hardwired onto the PCB, so no need to deal with `EE_HANDS` or flashing .eep files.
 
